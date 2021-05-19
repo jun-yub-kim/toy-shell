@@ -25,7 +25,7 @@ int main(void)
         s = fgets(command, MAX_LEN_LINE, stdin);
         
         if (s == "exit") {
-            exit(1)
+            exit(0)
         }
         
         if (s == NULL) {
