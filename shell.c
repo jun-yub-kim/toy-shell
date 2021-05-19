@@ -15,12 +15,19 @@ int main(void)
     int ret, status;
     pid_t pid, cpid;
     
+    printf("종료키는 'exit' 입니다"
+    
     while (true) {
         char *s;
         int len;
         
         printf("MyShell $ ");
         s = fgets(command, MAX_LEN_LINE, stdin);
+        
+        if (s == "exit") {
+            exit(1)
+        }
+        
         if (s == NULL) {
             fprintf(stderr, "fgets failed\n");
             exit(1);
